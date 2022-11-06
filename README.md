@@ -15,7 +15,7 @@ This is an android application created with jetpack and jetpack compose, applyin
 Dillinger uses a number of open source projects to work properly:
 
 - [Framework Android]
-- [Clean Architecture] To give the application a solid and easy to scale structure
+- [Clean Architecture] To give the application a solid and easy way to scale structure
 - [Jetpack] - a set of libraries and tools that allow create robust applications
 - [Jetpack Compose] - an UI library to create great User Interfaces
   - [Room] - Room is a persistence library that provides an abstraction layer over SQLite 
