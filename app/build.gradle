@@ -13,7 +13,7 @@ apply from: "${rootProject.projectDir}/scripts_gradle/commonDependencies.gradle"
 apply from: "${rootProject.projectDir}/scripts_gradle/otherDependencies.gradle"
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.nykode.runtrackingcompose"
