@@ -1,0 +1,28 @@
+ext.stagesConfig = {
+
+    flavorDimensions "stage"
+    productFlavors {
+        develop {
+            dimension "stage"
+
+            buildConfigField("String", "ApiUrl", "\"https://www.abc.com/\"")
+        }
+
+        production {
+            dimension "stage"
+
+            buildConfigField("String", "ApiUrl", "\"https://www.abc.com/\"")
+        }
+    }
+
+    //This apply applicatiId suffix
+    productFlavors.all { flavor ->
+        if (flavor.hasProperty('myApplicationIdSuffix') && isApplicationProject()) {
+            flavor.applicationIdSuffix = flavor.myApplicationIdSuffix
+        }
+        buildConfigField("String", "encKey", "\"Sjikv11g==\"")
+    }
+}
+def isApplicationProject() {
+    return project.android.class.simpleName.startsWith('BaseAppModuleExtension')
+}

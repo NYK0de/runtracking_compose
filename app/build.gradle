@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
+    id("dagger.hilt.android.plugin")
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+apply from: "${rootProject.projectDir}/scripts_gradle/stages.gradle"
+apply from: "${rootProject.projectDir}/scripts_gradle/generalConfigs.gradle"
+apply from: "${rootProject.projectDir}/scripts_gradle/commonDependencies.gradle"
+apply from: "${rootProject.projectDir}/scripts_gradle/otherDependencies.gradle"
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.nykode.runtrackingcompose"
+        minSdk project.minSdkVersion
+        targetSdk project.targetSdkVersion
+        versionCode project.versionCode
+        versionName project.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    with stagesConfig
+    with commonConfig
+    namespace "com.nykode.runtrackingcompose"
+}
+
+dependencies {
+
+    with commonDependencies
+    with otherDependencies
+}
