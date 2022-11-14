@@ -1,4 +1,4 @@
-package cr.fi.bncr.runtrackingcompose
+package com.nykode.runtrackingcompose
 
 import org.junit.Test
 

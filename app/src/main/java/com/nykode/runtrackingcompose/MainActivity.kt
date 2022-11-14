@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import cr.fi.bncr.runtrackingcompose.ui.theme.RuntrackingComposeTheme
+import com.nykode.runtrackingcompose.ui.theme.RuntrackingComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

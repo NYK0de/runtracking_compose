@@ -1,4 +1,4 @@
-package cr.fi.bncr.runtrackingcompose.ui.theme
+package com.nykode.runtrackingcompose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
